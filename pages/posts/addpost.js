@@ -18,6 +18,7 @@ async function addpost() {
         try {
             await axios.post(`${domain}/posts`, post)
             alert('Post added Successfully')
+            window.location.reload()
         } catch (error) {
             alert('Something went wrong')
         }

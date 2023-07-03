@@ -11,18 +11,19 @@ function Index({ post }) {
   const [imageUrl, setImageUrl] = useState(post.imageUrl)
 
   async function updatepost() {
-    // const updatedPost = {
-    //   title,
-    //   description,
-    //   imageUrl
-    // }
+    const updatedPost = {
+      title,
+      description,
+      imageUrl
+    }
 
-    // try {
-    //   await axios.put(`${domain}/posts/${post.id}`, updatedPost)
-    //   alert('Post updated successfully')
-    // } catch (error) {
-    //   alert('Something went wrong')
-    // }
+    try {
+      await axios.put(`${domain}/posts/${post._id}`, updatedPost)
+      alert('Post updated successfully')
+    } catch (error) {
+      alert('Something went wrong')
+      console.log(error)
+    }
   }
 
   return (
